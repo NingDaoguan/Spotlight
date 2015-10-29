@@ -2,10 +2,7 @@
 ###-------------------- Image Processing class ----------------------------------
 ###-----------------
 
-import Image
-import ImageFilter
-import ImageChops
-import ImageEnhance
+from PIL import Image, ImageFilter, ImageChops, ImageEnhance
 import math
 import operator  # used by histogram equalization function
 

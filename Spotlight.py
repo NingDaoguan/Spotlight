@@ -10,7 +10,7 @@ import struct
 import time
 import SpotlightCommand
 import SpotlightGui
-import Image
+from PIL import Image
 import PilProcess
 try:
     from commands import *

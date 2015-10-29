@@ -4,7 +4,7 @@ import string
 import SpotlightAoi
 import Spotlight
 import SpotlightGui
-import Image
+from PIL import Image
 import PilProcess
 import math
 
