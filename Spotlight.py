@@ -56,8 +56,8 @@ try:
     import XpmImagePlugin
 except:
     pass
-if sys.platform == 'darwin':
-    import VideoReaderMac
+#if sys.platform == 'darwin':
+#    import VideoReaderMac
 
 # define globals
 currentfile = ""
