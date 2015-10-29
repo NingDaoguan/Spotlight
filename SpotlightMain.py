@@ -1590,13 +1590,11 @@ class RecentFiles:
         'update the File menu'
         num = len(self.recentFiles)
 
-        # delete items but the first 3
+        # delete all file menu items but the first 3
         nf = self.parent.menuFile.GetMenuItems()
-        count = self.parent.menuFile.GetMenuItemCount()
-        c = int(count) - 3 # the 3 menu items are Open, SaveAs, and SaveAoi
-        for i in range (c):
-            ii = i + 1
-            self.parent.menuFile.DestroyItem (nf[len (nf) - ii])
+        for i in range (len(nf)-1, 0, -1):
+            if i<3: break    # the 3 saved menu items are Open, SaveAs, and SaveAoi
+            self.parent.menuFile.DestroyItem(nf[i])
 
         # add all recent file menus
         self.parent.menuFile.AppendSeparator()
