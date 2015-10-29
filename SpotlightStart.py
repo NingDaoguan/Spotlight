@@ -1,18 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env pythonw
 
 import sys, os
-
-# check for wrong interpreter on Mac
-if sys.platform == 'darwin':
-    try:
-        runningAsFrozenApp = sys.frozen
-    except AttributeError:
-        # running from command line, not as frozen application
-        if sys.executable.split('/')[-1] == 'python':
-            # restart with 'pythonw' interpreter
-            arguments = ['/usr/bin/pythonw', os.getcwd() + '/SpotlightStart.py'] + sys.argv[1:]
-            os.execvp('/usr/bin/pythonw', arguments )
-
 from SpotlightMain import mtApp
 import SpotlightGui
 
