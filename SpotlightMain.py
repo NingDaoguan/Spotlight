@@ -574,7 +574,6 @@ class SpotlightFrame(wx.Frame):
         self.tb = self.CreateToolBar(wx.TB_HORIZONTAL|wx.NO_BORDER|wx.TB_FLAT)
         self.tb.SetToolBitmapSize((21,19)) # make buttons bigger than default 16x15
 
-        wx.InitAllImageHandlers()
         openImg            = images.getOpenBitmap()
         saveAsImg          = images.getSaveAsBitmap()
         undoImg            = images.getUndoBitmap()
