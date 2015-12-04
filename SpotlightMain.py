@@ -110,7 +110,7 @@ def convertPILtoWX(pilimage):
     if pilimage.mode == 'L':
         pilimage = pilimage.convert("RGB")
     wximg = wx.EmptyImage(pilimage.size[0], pilimage.size[1])
-    wximg.SetData(pilimage.tostring('raw','RGB'))
+    wximg.SetData(pilimage.tobytes('raw','RGB'))
     return wximg
 
 
